@@ -51,9 +51,9 @@ public class CalendarDateRangePickerViewController: UICollectionViewController {
         }
 
         let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(CalendarDateRangePickerViewController.didTapCancel))
-        cancelItem.setTitleTextAttributes(attrs, for: .normal)
-        self.navigationItem.leftBarButtonItem = cancelItem
+        let resetItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(CalendarDateRangePickerViewController.didTapCancel))
+        resetItem.setTitleTextAttributes(attrs, for: .normal)
+        self.navigationItem.leftBarButtonItem = resetItem
         
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(CalendarDateRangePickerViewController.didTapDone))
         doneItem.setTitleTextAttributes(attrs, for: .normal)
