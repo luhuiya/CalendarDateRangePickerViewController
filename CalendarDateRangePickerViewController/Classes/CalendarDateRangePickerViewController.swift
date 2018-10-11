@@ -53,6 +53,10 @@ public class CalendarDateRangePickerViewController: UICollectionViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(CalendarDateRangePickerViewController.didTapCancel))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(CalendarDateRangePickerViewController.didTapDone))
         self.navigationItem.rightBarButtonItem?.isEnabled = selectedStartDate != nil && selectedEndDate != nil
+
+        let attrs = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationItem.leftBarButtonItem?.setTitleTextAttributes(attrs, for: .normal)
+        self.navigationItem.rightBarButtonItem?.setTitleTextAttributes(attrs, for: .normal)
     }
     
     @objc func didTapCancel() {
